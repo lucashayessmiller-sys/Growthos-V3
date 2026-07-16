@@ -16,7 +16,7 @@ import { DEMO_ORG, DEMO_USERS, CURRENT_USER } from "@/lib/demo-data"
 const PLANS = [
   { name: "Starter", price: "$149/mo", modules: "3 modules", highlight: false },
   { name: "Growth", price: "$449/mo", modules: "8 modules", highlight: true },
-  { name: "Scale", price: "$1,200/mo", modules: "All 15 modules", highlight: false },
+  { name: "Scale", price: "$1,200/mo", modules: "All 12 modules", highlight: false },
   { name: "Enterprise", price: "Custom", modules: "All modules + SSO, SLAs", highlight: false },
 ]
 
