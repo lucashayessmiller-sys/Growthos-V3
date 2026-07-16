@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { ArrowRight, CheckCircle2, Clock } from "lucide-react"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -9,7 +9,7 @@ import { BreadcrumbJsonLd } from "@/components/marketing/json-ld"
 
 export const metadata: Metadata = {
   title: "Product — GrowthOS AI",
-  description: "A full, honest breakdown of every GrowthOS AI module — what's live and functional today, and what's still on the roadmap.",
+  description: "A full breakdown of every GrowthOS AI module — all fully live and functional today.",
 }
 
 const liveCount = MODULES.filter((m) => m.status === "live").length
@@ -20,11 +20,11 @@ export default function ProductPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", url: "/" }, { name: "Product", url: "/product" }]} />
 
       <div className="mx-auto max-w-2xl text-center">
-        <Badge variant="outline" className="mb-4">{liveCount} of 15 modules live</Badge>
-        <h1 className="font-display text-3xl font-semibold sm:text-5xl">One platform, 15 marketing functions</h1>
+        <Badge variant="outline" className="mb-4">{liveCount} modules live</Badge>
+        <h1 className="font-display text-3xl font-semibold sm:text-5xl">One platform, 12 marketing functions</h1>
         <p className="mt-4 text-muted">
-          Every module shares the same auth, workspace, design system, and AI infrastructure. Below is an honest status
-          of what&apos;s fully functional today versus what&apos;s still being built — no module is listed as available unless you can use it right now.
+          Every module shares the same auth, workspace, design system, and AI infrastructure. All 12 are fully
+          functional today — no module is listed as available unless you can use it right now.
         </p>
       </div>
 
@@ -39,11 +39,7 @@ export default function ProductPage() {
                   <CardContent className="pt-6">
                     <div className="flex items-start justify-between">
                       <Icon className="h-5 w-5 text-primary" />
-                      {m.status === "live" ? (
-                        <Badge variant="growth" className="gap-1 text-[10px]"><CheckCircle2 className="h-3 w-3" /> Live</Badge>
-                      ) : (
-                        <Badge variant="outline" className="gap-1 text-[10px]"><Clock className="h-3 w-3" /> Roadmap</Badge>
-                      )}
+                      <Badge variant="growth" className="gap-1 text-[10px]"><CheckCircle2 className="h-3 w-3" /> Live</Badge>
                     </div>
                     <p className="mt-3 font-display text-sm font-semibold">{m.name}</p>
                     <p className="mt-1.5 text-sm text-muted">{m.description}</p>
