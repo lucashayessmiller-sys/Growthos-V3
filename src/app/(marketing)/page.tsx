@@ -24,7 +24,7 @@ const FAQS = [
   { question: "Is GrowthOS AI a marketing agency?", answer: "No. GrowthOS AI is software you run yourself — every AI-generated draft is reviewed and approved by you before it goes anywhere. There are no retainers, account managers, or hourly billing." },
   { question: "What happens if I don't configure an AI provider?", answer: "Every generation feature has a deterministic fallback, so the product is fully usable without any AI API key configured. Add an Anthropic API key when you want live AI generation." },
   { question: "Do I need to connect a database to use it?", answer: "No — GrowthOS AI runs entirely in your browser with demo data until you're ready to connect a Supabase project for real persistence and multi-user access." },
-  { question: "Which modules are actually functional today?", answer: `${liveModules.length} of 15 modules are fully built and usable now: ${liveModules.map((m) => m.name).join(", ")}. The rest are on the public roadmap.` },
+  { question: "Which modules are actually functional today?", answer: `All ${liveModules.length} modules are fully built and usable now: ${liveModules.map((m) => m.name).join(", ")}.` },
 ]
 
 export default function HomePage() {
