@@ -16,13 +16,13 @@ const liveCount = MODULES.filter((m) => m.status === "live").length
 const PLANS = [
   { name: "Starter", price: "$0", cadence: "forever", description: "For trying GrowthOS AI with your own workspace and demo data.", features: ["Demo workspace, no card required", "3 modules of your choice", "Deterministic AI fallback (no API key needed)", "Community support"], cta: "Start free", highlight: false },
   { name: "Growth", price: "$149", cadence: "/mo", description: "For a single team running content, social, and reporting day to day.", features: [`Up to 8 modules`, "Real Supabase persistence", "Bring your own Anthropic API key", "Email support"], cta: "Start free", highlight: true },
-  { name: "Scale", price: "$449", cadence: "/mo", description: "For teams that want every live module and priority roadmap input.", features: [`All ${liveCount} live modules`, "Multiple workspace members with roles", "Priority feature requests", "Priority support"], cta: "Start free", highlight: false },
+  { name: "Scale", price: "$449", cadence: "/mo", description: "For teams that want every live module.", features: [`All ${liveCount} live modules`, "Multiple workspace members with roles", "Priority feature requests", "Priority support"], cta: "Start free", highlight: false },
   { name: "Enterprise", price: "Custom", cadence: "", description: "For multi-location or multi-brand businesses with custom needs.", features: ["Custom deployment & SSO", "Dedicated onboarding", "Custom data retention", "SLA-backed support"], cta: "Contact us", highlight: false },
 ]
 
 const FAQS = [
   { q: "Why is Starter free?", a: "GrowthOS AI is designed to run at near-zero infrastructure cost without an AI key or database connected, so we can offer a genuinely free tier rather than a time-limited trial." },
-  { q: "What happens as new modules ship?", a: "Pricing is module-based. As more of the 15 modules go from roadmap to live, your plan's module allowance applies to whichever ones you choose." },
+  { q: "How does module-based pricing work?", a: "Pick which of the 12 live modules your plan includes, and upgrade as your team needs more." },
   { q: "Do I need a credit card to start?", a: "No. Starter requires no payment method." },
 ]
 
